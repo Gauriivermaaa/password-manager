@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Add Entry — VaultX{% endblock %}
+
+{% block content %}
+<div class="auth-box">
+  <h2>Add Password</h2>
+  <form method="POST">
+    <label>Title *</label>
+    <input type="text" name="title" placeholder="e.g. GitHub, Gmail" required>
+
+    <label>Username / Email</label>
+    <input type="text" name="username" placeholder="user@example.com">
+
+    <label>Password *</label>
+    <input type="text" name="password" placeholder="the password to save" required>
+
+    <label>URL</label>
+    <input type="url" name="url" placeholder="https://github.com">
+
+    <label>Notes</label>
+    <textarea name="notes" placeholder="Any extra info..."></textarea>
+
+    <button type="submit">Save Password</button>
+  </form>
+  <p><a href="{{ url_for('dashboard') }}">← Back to Dashboard</a></p>
+</div>
+{% endblock %}
